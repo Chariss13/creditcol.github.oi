@@ -1,0 +1,98 @@
+.mainContent {
+  display: flex;
+}
+.leftSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0% 5%;
+}
+.leftSide h1 {
+  color: #111b47;
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.leftSide p {
+  color: #505f98;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.leftSide button {
+  background-color: #111b47;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  margin-left: 30%;
+  cursor: pointer;
+}
+.rightSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111b47;
+  font-family: "Poppins", sans-serif;
+}
+.rightSide form {
+  display: flex;
+  flex-direction: column;
+}
+.rightSide p {
+  color: #111b47;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #111b47;
+  width: fit-content;
+}
+.contentInput{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0rem;
+}
+
+.contentInput input{
+  background-color: #c1c1c1;
+  border: none;
+  height: 1.5rem;
+  margin: .2rem;
+}
+.titleContentInput{
+  color: #111b47;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: .2rem;
+  font-weight: 600;
+}
+
+.btnSubmit{
+  background-color: #111b47;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20%;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  width: 50px;
+}
+
+.contentInput div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
