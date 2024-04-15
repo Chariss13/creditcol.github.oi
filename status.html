@@ -1,149 +1,254 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
- <!-- Codificación -->
-        <meta name="viewport" content="width=device-width"> <!-- Se adapata al ancho del dispositivo-->
-        <title>CreditCol</title> <!-- Titulo de la pestaña y el explorador -->
-        
-        <meta name="description" content="PRÉSTAMOS DE DINERO 100% EN LÍNEA"> <!-- Descripcion que aparece en el buscador -->
-    
-        <meta property="og:title" content="CreditCol">
-        <meta property="og:description" content="CreditCol, tu mejor opción">
-        <meta property="og:image" content="/img/creditcol.png">
-        <meta name="theme-color" content="#09f"> 
-        <link rel="icon" type="image/png" href="/img/icon.png"> <!-- Logo al lado de la pestaña -->
-        <link rel="stylesheet" href="/css/styl.css">
-        <link rel="stylesheet" href="/css/sindex.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Codificación -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Se adapata al ancho del dispositivo-->
+    <title>CreditCol</title>
+    <!-- Titulo de la pestaña y el explorador -->
 
-    <body>
+    <meta name="description" content="PRÉSTAMOS DE DINERO 100% EN LÍNEA" />
+    <!-- Descripcion que aparece en el buscador -->
 
-        <main>
-            <section class="home">
-                <header class="navbar">
-                    <p><img src="/img/creditcol.png" alt="Logo de CreditCol" class="logo"></p>
-            
-                    <nav>
-                        <a class="link" href="index.html">Principal</a>
-                        <a class="link" href="status.html">Consulta Tu estado</a>
-                        <a class="link" href="contact.html">Contacto</a>
-                    </nav>
-                </header>
-            
+    <meta property="og:title" content="CreditCol" />
+    <meta property="og:description" content="CreditCol, tu mejor opción" />
+    <meta property="og:image" content="/img/creditcol.png" />
+    <meta name="theme-color" content="#09f" />
+    <link rel="icon" type="image/png" href="/img/icon.png" />
+    <!-- Logo al lado de la pestaña -->
+    <link rel="stylesheet" href="/css/styl.css" />
+    <link rel="stylesheet" href="/css/sindex.css" />
+    <link rel="stylesheet" href="/css/status.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="home">
+        <header class="navbar">
+          <p>
+            <img
+              src="/img/creditcol.png"
+              alt="Logo de CreditCol"
+              class="logo"
+            />
+          </p>
+
+          <nav>
+            <a class="link" href="index.html">Principal</a>
+            <a class="link" href="status.html">Consulta Tu estado</a>
+            <a class="link" href="contact.html">Contacto</a>
+          </nav>
+        </header>
+        <div class="mainContent">
+          <div class="leftSide">
+            <h1>Consulta el estado de tu crédito.</h1>
+            <p>
+              Bienvenido a la página de Consulta de Estado de Crédito de
+              CrediCOL. Aquí puedes acceder a información detallada sobre tu
+              situación crediticia de forma segura y conveniente. Nuestro
+              objetivo es brindarte transparencia y control sobre tus finanzas,
+              permitiéndote monitorear el estado de tus créditos en cualquier
+              momento y desde cualquier lugar.
+            </p>
+            <p>
+              Si deseas obtener información más detallada y realizar diferentes
+              procesos a la consulta del estado de tu crédito, u obtener más
+              productos con nosotros, ingresa a tu portal transaccional.
+            </p>
+            <button>INGRESO</button>
+          </div>
+          <div class="rightSide">
+            <p>Estado de tu crédito</p>
+            <form>
+              <div class="contentInput">
+                <label class="titleContentInput" for=""
+                  >* TIPO DE DOCUMENTO</label
+                >
                 <div>
-                    <h1>PRÉSTAMOS DE DINERO 100% EN LÍNEA</h1>
-                    <p>Con Credicol tienes el crédito online más seguro, rápido y flexible del mercado.</p>  
-                    <img src="/img/credit.png" 
-                         alt="logo" 
-                         style="float:right"
-                    >
+                  <input
+                    class="checkboxInput"
+                    type="checkbox"
+                    id="CEDULA CIUDADANIA"
+                    name="CEDULA CIUDADANIA"
+                  />
+                  <label for="CEDULA CIUDADANIA">CEDULA CIUDADANIA</label>
                 </div>
-            </section>
-        </main>
+                <div>
+                  <input
+                    class="checkboxInput"
+                    type="checkbox"
+                    id="CEDULA EXTRANJERIA"
+                    name="CEDULA EXTRANJERIA"
+                  />
+                  <label for="CEDULA EXTRANJERIA">CEDULA EXTRANJERIA</label>
+                </div>
+                <div>
+                  <input
+                    class="checkboxInput"
+                    type="checkbox"
+                    id="PASAPORTE"
+                    name="PASAPORTE"
+                  />
+                  <label for="PASAPORTE">PASAPORTE</label>
+                </div>
+              </div>
+              <div class="contentInput">
+                <label class="titleContentInput" for="">Ingrese su número de identificación</label>
+                <input type="text" />
+                <label class="titleContentInput"  for="">Contraseña</label>
+                <input type="password" />
+                <label class="titleContentInput"  for="">Token de Seguridad</label>
+                <input type="text" />
+              </div>
+              <input type="submit" value="CONSULTAR" class="btnSubmit" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <footer>
-            <div class="columna">
-                <h3>INFORMACIÓN ÚTIL</h3>
+    <footer>
+      <div class="columna">
+        <h3>INFORMACIÓN ÚTIL</h3>
 
-                <dialog id="faqDialog">
-                    <h1>Preguntas Frecuentes</h1>
-                    <details>
-                        <summary>Cualquier persona peude solicitar credito?</summary>
-                        <p>si, y es totalmente virtual</p>
-                    </details>
-                    <details>
-                        <summary>Como consultar el estado de mi credito?</summary>
-                        <p>debes dar clic en el enlace Consulta tu estado</p>
-                    </details>
-                    <button id="faqClose">Cerrar</button>
-                </dialog>
+        <dialog id="faqDialog">
+          <h1>Preguntas Frecuentes</h1>
+          <details>
+            <summary>Cualquier persona peude solicitar credito?</summary>
+            <p>si, y es totalmente virtual</p>
+          </details>
+          <details>
+            <summary>Como consultar el estado de mi credito?</summary>
+            <p>debes dar clic en el enlace Consulta tu estado</p>
+          </details>
+          <button id="faqClose">Cerrar</button>
+        </dialog>
 
-                <ul class="enlace">
-                    <button id="faqShow">Preguntas Frecuentes</button>
-                    <li><a href="contact.html" class="boton">Contactanos</a></li>
-                    <li><a href="team.html" class="boton">Nosotros</a></li>
-                </ul>
-            </div>
-            
-            <script>
-                const showButton = document.getElementById('faqShow');
-                const dialog = document.getElementById('faqDialog');
-                const closeButton = document.getElementById('faqClose');
-            
-                showButton.addEventListener('click', () => {
-                    dialog.showModal();
-                });
-            
-                closeButton.addEventListener('click', () => {
-                    dialog.close();
-                });
-            </script>          
-            
-            <div class="columna">
-                <h3>MI CUENTA</h3>
-                <ul class="enlace">
-                    <li><a href="login.html" class="boton">Iniciar sesión</a></li>
-                    <li><a href="status.html" class="boton">Estado credito</a></li>
-                </ul>
-            </div>
-            
-            <div class="columna">
-                <h3>LEGAL</h3>
-            
-                <dialog id="terDialog">
-                    <h1>Términos y Condiciones</h1>
-                    <p>El Aliado será el único responsable y encargado de las reclamaciones por protección al consumidor, efectividad de la garantía, productos defectuosos, cancelaciones y cualquier reclamación que tengas relacionadas con el producto o servicio adquirido. Addi no comparece a ni es parte de tu relación con el Aliado en condición de proveedor de los bienes y servicios que adquieres con este. Por eso, Addi no compartirá responsabilidad con el Aliado en esta materia. Esto no limita nuestra responsabilidad frente a las obligaciones y derechos que surgen exclusivamente de nuestra relación comercial con la emisión de tu crédito.</p>
-                    <button id="terClose">Cerrar</button>
-                </dialog>
-                <button id="terShow">Términos y Condiciones</button>
-                <br/>
-                <dialog id="dataDialog">
-                    <h1>Habeas data</h1>
-                    <p>La Ley 1266 de 2008, también conocida como Ley de Habeas Data, se aplica a todos los datos personales financieros, crediticios, comerciales y de servicios registrados en un banco de datos . En este sentido, la aplicación de la Ley 1266 de 2008 está encaminada a regular el uso de esa información y por tanto otro tipo de datos (por ejemplo aquellos mantenidos en un ámbito exclusivamente personal o doméstico o los que se incluyen en una historia clínica) se encuentran excluidos de la aplicación de esta norma. </p>
-                    <button id="dataClose">Cerrar</button>
-                </dialog>
-            
-                <button id="dataShow">Habeas Data</button>
-            </div>
-            <script>
-                const tshowButton = document.getElementById('terShow');
-                const tdialog = document.getElementById('terDialog');
-                const tcloseButton = document.getElementById('terClose');
-            
-                tshowButton.addEventListener('click', () => {
-                    tdialog.showModal();
-                });
-            
-                tcloseButton.addEventListener('click', () => {
-                    tdialog.close();
-                });
-            </script> 
-            <script>
-                const hshowButton = document.getElementById('dataShow');
-                const hdialog = document.getElementById('dataDialog');
-                const hcloseButton = document.getElementById('dataClose');
-            
-                hshowButton.addEventListener('click', () => {
-                    hdialog.showModal();
-                });
-            
-                hcloseButton.addEventListener('click', () => {
-                    hdialog.close();
-                });
-            </script>          
-            
-            <div class="columna">
-                <h3>REDES SOCIALES</h3>
-                <ul class="redes">
-                    <li><a href="/contact.html"><img src="/img/v_co.png" alt="Comentarios"></a></li>
-                    <li><a href="https://facebook.com"><img src="/img/v_fb.png" alt="Facebook"></a></li>
-                    <li><a href="https://whatsapp.com"><img src="/img/v_wa.png" alt="WhatsApp"></a></li>
-                    <li><a href="https://tiktok.com"><img src="/img/v_tt.png" alt="TikTok"></a></li>
-                    <li><a href="https://instagram.com"><img src="/img/v_ig.png" alt="Instagram"></a></li>
-                </ul>
-            </div>
-        </footer>
-        
-    </body>
+        <ul class="enlace">
+          <button id="faqShow">Preguntas Frecuentes</button>
+          <li><a href="contact.html" class="boton">Contactanos</a></li>
+          <li><a href="team.html" class="boton">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <script>
+        const showButton = document.getElementById("faqShow");
+        const dialog = document.getElementById("faqDialog");
+        const closeButton = document.getElementById("faqClose");
+
+        showButton.addEventListener("click", () => {
+          dialog.showModal();
+        });
+
+        closeButton.addEventListener("click", () => {
+          dialog.close();
+        });
+      </script>
+
+      <div class="columna">
+        <h3>MI CUENTA</h3>
+        <ul class="enlace">
+          <li><a href="login.html" class="boton">Iniciar sesión</a></li>
+          <li><a href="status.html" class="boton">Estado credito</a></li>
+        </ul>
+      </div>
+
+      <div class="columna">
+        <h3>LEGAL</h3>
+
+        <dialog id="terDialog">
+          <h1>Términos y Condiciones</h1>
+          <p>
+            El Aliado será el único responsable y encargado de las reclamaciones
+            por protección al consumidor, efectividad de la garantía, productos
+            defectuosos, cancelaciones y cualquier reclamación que tengas
+            relacionadas con el producto o servicio adquirido. Addi no comparece
+            a ni es parte de tu relación con el Aliado en condición de proveedor
+            de los bienes y servicios que adquieres con este. Por eso, Addi no
+            compartirá responsabilidad con el Aliado en esta materia. Esto no
+            limita nuestra responsabilidad frente a las obligaciones y derechos
+            que surgen exclusivamente de nuestra relación comercial con la
+            emisión de tu crédito.
+          </p>
+          <button id="terClose">Cerrar</button>
+        </dialog>
+        <button id="terShow">Términos y Condiciones</button>
+        <br />
+        <dialog id="dataDialog">
+          <h1>Habeas data</h1>
+          <p>
+            La Ley 1266 de 2008, también conocida como Ley de Habeas Data, se
+            aplica a todos los datos personales financieros, crediticios,
+            comerciales y de servicios registrados en un banco de datos . En
+            este sentido, la aplicación de la Ley 1266 de 2008 está encaminada a
+            regular el uso de esa información y por tanto otro tipo de datos
+            (por ejemplo aquellos mantenidos en un ámbito exclusivamente
+            personal o doméstico o los que se incluyen en una historia clínica)
+            se encuentran excluidos de la aplicación de esta norma.
+          </p>
+          <button id="dataClose">Cerrar</button>
+        </dialog>
+
+        <button id="dataShow">Habeas Data</button>
+      </div>
+      <script>
+        const tshowButton = document.getElementById("terShow");
+        const tdialog = document.getElementById("terDialog");
+        const tcloseButton = document.getElementById("terClose");
+
+        tshowButton.addEventListener("click", () => {
+          tdialog.showModal();
+        });
+
+        tcloseButton.addEventListener("click", () => {
+          tdialog.close();
+        });
+      </script>
+      <script>
+        const hshowButton = document.getElementById("dataShow");
+        const hdialog = document.getElementById("dataDialog");
+        const hcloseButton = document.getElementById("dataClose");
+
+        hshowButton.addEventListener("click", () => {
+          hdialog.showModal();
+        });
+
+        hcloseButton.addEventListener("click", () => {
+          hdialog.close();
+        });
+      </script>
+
+      <div class="columna">
+        <h3>REDES SOCIALES</h3>
+        <ul class="redes">
+          <li>
+            <a href="/contact.html"
+              ><img src="/img/v_co.png" alt="Comentarios"
+            /></a>
+          </li>
+          <li>
+            <a href="https://facebook.com"
+              ><img src="/img/v_fb.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://whatsapp.com"
+              ><img src="/img/v_wa.png" alt="WhatsApp"
+            /></a>
+          </li>
+          <li>
+            <a href="https://tiktok.com"
+              ><img src="/img/v_tt.png" alt="TikTok"
+            /></a>
+          </li>
+          <li>
+            <a href="https://instagram.com"
+              ><img src="/img/v_ig.png" alt="Instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
