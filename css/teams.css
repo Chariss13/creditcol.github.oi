@@ -115,4 +115,32 @@ header nav {
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
+  body {
+    background-image: url('Images/bg.png'); 
+    background-position: right center; /* Ajusta la posición de la imagen de fondo a la derecha y centrada verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-attachment: inherit; /* Fija la imagen de fondo en su posición mientras se desplaza la página */
+    background-size: 70%;
+  }
+  
+  header {
+    background-image: url('Images/bg.png'); /* Aplica la misma imagen de fondo al header */
+    background-position: right center; /* Ajusta la posición de la imagen de fondo a la derecha y centrada verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: 70%; /* Ajusta el tamaño de la imagen de fondo */
+  }
+  
+  footer {
+    background-image: url('Images/bg.png'); /* Aplica la misma imagen de fondo al footer */
+    background-position: right center; /* Ajusta la posición de la imagen de fondo a la derecha y centrada verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: 70%; /* Ajusta el tamaño de la imagen de fondo */
+  }
+header {
+  padding: 1px 0; /* Ajusta el espacio interno superior e inferior del encabezado */
 }
+header nav ul li a,
+#consulta h2 {
+  font-size: 24px; /* Ajusta el tamaño del texto del encabezado y de la sección */
+  text-align: center; /* Centra el texto horizontalmente */
+} 
