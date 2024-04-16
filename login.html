@@ -34,23 +34,51 @@
                     <div class="login-section">
                         <h1>INICIO SESIÓN</h1>
                         <h2>USUARIO</h2>
-                        <input type="text" placeholder="Ingrese su usuario">
-                    
+                        <input type="text" id="usuarioInput" placeholder="Ingrese su usuario">
+        
                         <h2>CONTRASEÑA</h2>
-                        <input type="password" placeholder="Ingrese su contraseña">
+                        <input type="password" id="contraseñaInput" placeholder="Ingrese su contraseña">
                     
                         <a href="#">¿Has olvidado tu contraseña?</a>
                     
-                        <button>CLIENTE</button>
-                        <button>ADMIN</button>
-                    </div>
-                    <div class="logo-section">
+                        <button onclick="iniciarSesion('cliente')">CLIENTE</button>
+                        <button onclick="iniciarSesion('admin')">ADMIN</button>
+
+                    </div>class="logo-section">
                         <img src="/img/credit.png" 
                             alt="logo de Creditcol" 
                             class="logoC">
                     </div>
                 </div>
-                <script> src="/BD/validar.js"</script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="validar.js"></script>
+                <script>
+                    function iniciarSesion(tipo) {
+                        const usuario = document.getElementById('usuarioInput').value;
+                        const contraseña = document.getElementById('contraseñaInput').value;
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'http://localhost:3000/validarCredenciales',
+                            contentType: 'application/json',
+                            data: JSON.stringify({ usuario, contraseña, hoja: tipo === 'cliente' ? 'inicio' : 'Admin' }),
+                            success: function(response) {
+                                if (response.valido) {
+                                    if (tipo === 'cliente') {
+                                        window.location.href = 'status.html';
+                                    } else {
+                                        window.location.href = 'form.html';
+                                    }
+                                } else {
+                                    alert('Usuario o contraseña incorrectos');
+                                }
+                            },
+                            error: function() {
+                                alert('Error al procesar la solicitud');
+                            }
+                        });
+                    }
+                </script>
                 
             </section>
         </main>
