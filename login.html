@@ -32,9 +32,9 @@
                 </header>
             
                 <div class="container">
-                    
-                    <!-- En lugar de un div se cambia a un form para poder tener un orden semántico y así poder darle propiedades desde js -->
-                    <form action="" class="login-section" id="form">
+
+                    <!-- Juan: En lugar de un div se cambia a un form para poder tener un orden semántico y así poder darle propiedades desde js -->
+                    <form action="index.html" method="get" class="login-section" id="form">
                         <h1>INICIO SESIÓN</h1>
                         <h2>USUARIO</h2>
                         <input type="text" name="" id="usuarioInput" placeholder="Ingrese su usuario">
@@ -47,10 +47,11 @@
                         <!-- <button onclick="iniciarSesion('cliente')">CLIENTE</button>
                         <button onclick="iniciarSesion('admin')">ADMIN</button> -->
 
-                        <input type="submit" value="INGRESAR" class="cliente">
+                        <!--Juan: Se cambia el Button por un Submit para poder obtener una validación más sencilla -->
+                        <input type="submit" value="INGRESAR" class="cliente" id="submit">
                         <!-- <input type="submit" value="ADMIN" class="admin"> -->
 
-                        <!-- Esta clase permite la aparición del mensaje que evita que se envien datos incompletos o vacios -->
+                        <!--Juan: Esta clase permite la aparición del mensaje que evita que se envien datos incompletos o vacios -->
                         <p class="warning" id="warning"></p>
                     </form>
 
@@ -75,7 +76,7 @@
                         parrafo.innerHTML = ""
 
                         if(nombre.value.length <6 ) {
-                            warning += `El nombre no es valido <br>`
+                            warning += `El nombre no es valido <br> <br>`
                             entrar = true
                         }
                         if(pass.value.length < 8) {
@@ -85,10 +86,10 @@
 
                         if(entrar) {
                             parrafo.innerHTML = warning
+                        } else {
+                            
                         }
                     })
-
-                    
                 </script>
                 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="./BD/validar.js"></script>
