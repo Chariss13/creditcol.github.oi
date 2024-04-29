@@ -34,15 +34,19 @@
                     <div class="login-section">
                         <h1>INICIO SESIÓN</h1>
                         <h2>USUARIO</h2>
-                        <input type="text" id="usuarioInput" placeholder="Ingrese su usuario">
+                        <input type="text" id="usuarioInput" placeholder="Ingrese su usuario" required>
         
                         <h2>CONTRASEÑA</h2>
-                        <input type="password" id="contraseñaInput" placeholder="Ingrese su contraseña">
+                        <input type="password" id="contraseñaInput" placeholder="Ingrese su contraseña" required>
                     
                         <a href="#">¿Has olvidado tu contraseña?</a>
                     
-                        <button onclick="iniciarSesion('cliente')">CLIENTE</button>
-                        <button onclick="iniciarSesion('admin')">ADMIN</button>
+                        <!-- <button onclick="iniciarSesion('cliente')">CLIENTE</button>
+                        <button onclick="iniciarSesion('admin')">ADMIN</button> -->
+
+                        <input type="submit" value="CLIENTE" class="cliente">
+                        <input type="submit" value="ADMIN" class="admin">
+                        <p class="warning" id="warning"></p>
                     </div>
                     <div class="logo-section">
                         <img src="/img/credit.png" 

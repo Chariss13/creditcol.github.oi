@@ -69,7 +69,7 @@
 }
 
 /*botones*/
-.login-section button {
+.login-section .cliente, .admin {
     background-color: #111B47;
     color: #ffffff;
     border: none;
@@ -82,6 +82,10 @@
     width: 35%;
 }
 
-.login-setion button:hover {
+.admin:hover {
+    background-color: #1d4567;
+}
+
+.cliente:hover {
     background-color: #1d4567;
 }
