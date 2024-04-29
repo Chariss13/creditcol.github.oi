@@ -14,6 +14,7 @@
         <link rel="icon" type="image/png" href="/img/icon.png"> <!-- Logo al lado de la pestaña -->
         <link rel="stylesheet" href="/css/styl.css">
         <link rel="stylesheet" href="/css/slogin.css">
+
     </head>
 
     <body>
@@ -31,30 +32,65 @@
                 </header>
             
                 <div class="container">
-                    <div class="login-section">
+                    
+                    <!-- En lugar de un div se cambia a un form para poder tener un orden semántico y así poder darle propiedades desde js -->
+                    <form action="" class="login-section" id="form">
                         <h1>INICIO SESIÓN</h1>
                         <h2>USUARIO</h2>
-                        <input type="text" id="usuarioInput" placeholder="Ingrese su usuario" required>
+                        <input type="text" name="" id="usuarioInput" placeholder="Ingrese su usuario">
         
                         <h2>CONTRASEÑA</h2>
-                        <input type="password" id="contraseñaInput" placeholder="Ingrese su contraseña" required>
+                        <input type="password" name="" id="contraseñaInput" placeholder="Ingrese su contraseña">
                     
                         <a href="#">¿Has olvidado tu contraseña?</a>
                     
                         <!-- <button onclick="iniciarSesion('cliente')">CLIENTE</button>
                         <button onclick="iniciarSesion('admin')">ADMIN</button> -->
 
-                        <input type="submit" value="CLIENTE" class="cliente">
-                        <input type="submit" value="ADMIN" class="admin">
+                        <input type="submit" value="INGRESAR" class="cliente">
+                        <!-- <input type="submit" value="ADMIN" class="admin"> -->
+
+                        <!-- Esta clase permite la aparición del mensaje que evita que se envien datos incompletos o vacios -->
                         <p class="warning" id="warning"></p>
-                    </div>
+                    </form>
+
                     <div class="logo-section">
                         <img src="/img/credit.png" 
                             alt="logo de Creditcol" 
                             class="logoC">
                     </div>
                 </div>
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                <!-- Script de validación -->
+                <script>
+                    const nombre = document.getElementById("usuarioInput");
+                    const pass = document.getElementById("contraseñaInput");
+                    const form = document.getElementById("form");
+                    const parrafo = document.getElementById("warning");
+
+                    form.addEventListener("submit", e=> {
+                        e.preventDefault()
+                        let warning = ""
+                        let entrar = false
+                        parrafo.innerHTML = ""
+
+                        if(nombre.value.length <6 ) {
+                            warning += `El nombre no es valido <br>`
+                            entrar = true
+                        }
+                        if(pass.value.length < 8) {
+                            warning += `La contraseña debe tener más de 8 caracteres`
+                            entrar = true
+                        }
+
+                        if(entrar) {
+                            parrafo.innerHTML = warning
+                        }
+                    })
+
+                    
+                </script>
+                <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="./BD/validar.js"></script>
                 <script>
                     function iniciarSesion(tipo) {
@@ -82,7 +118,7 @@
                             }
                         });
                     }
-                </script>
+                </script> -->
                 
             </section>
         </main>

@@ -89,3 +89,13 @@
 .cliente:hover {
     background-color: #1d4567;
 }
+
+/* Warnings */
+
+.warning {
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    color:black;
+    padding-top: 20px;
+}
